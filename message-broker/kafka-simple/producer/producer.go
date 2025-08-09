@@ -15,7 +15,6 @@ func main() {
 		Addr:     kafka.TCP("127.0.0.1:9092"),
 		Topic:    "my-topic",
 		Balancer: &kafka.LeastBytes{},
-		// MaxAttempts: 1, // NO implicit retries → no dupes
 	}
 
 	messages := []kafka.Message{
